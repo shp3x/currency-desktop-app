@@ -37,6 +37,7 @@ class ConverterApplication(tk.CTk):
             url = 'https://www.cbr-xml-daily.ru/daily_json.js'
             req = requests.get(url).json()['Valute'][self.list_of_valutes.get().split()[1]]
             value = int(self.input_value.get()) * int(req['Value'])
+            
             self.output_value.delete(0, tk.END)
             self.output_value.insert(0, str(value) + ' ₽')
         except (ValueError, IndexError):
