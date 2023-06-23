@@ -16,7 +16,9 @@ class ConverterApplication(tk.CTk):
                         '🇧🇷 BRL', '🇭🇰 HKD', '🇬🇪 GEL', '🇩🇰DKK', '🇦🇪 AED',
                         '🇺🇸 USD', '🇪🇺 EUR', '🇨🇦 CAD', '🇶🇦 QAR', '🇨🇳 CNY',
                         '🇳🇿 NZD', '🇵🇱 PLN', '🇷🇴 RON', '🇸🇬 SGD', '🇨🇭CHF']
-        self.label_input_valute = tk.CTkLabel(self, text='Выберите валюту:').pack()
+        
+        self.label_input_valute = tk.CTkLabel(self, text='Выберите валюту:')
+        self.label_input_valute.pack()
 
         self.list_of_valutes = tk.CTkComboBox(self, values=self.valutes, state='readonly', hover=True)
         self.list_of_valutes.pack()
